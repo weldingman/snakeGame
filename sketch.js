@@ -12,10 +12,7 @@ function setup() {
 function draw() {
   background(0);
   show();
-  if(keyIsDown()){
 	move();
-  }
-  
   updateFood();
 }
 
