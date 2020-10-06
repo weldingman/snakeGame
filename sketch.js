@@ -19,19 +19,19 @@ function draw() {
 function mouseClicked() {
 	var dirSelectX = mouseX - agent.x;
 	var dirSelectY = mouseY - agent.y;
-  if(dirSelectX > dirSelectY && dirSelectY > 0){
+  if(dirSelectX > abs(dirSelectY)){
 	agent.dirX = 1;
 	agent.dirY = 0;
   }
-  if(dirSelectX > -dirSelectY && dirSelectY < 0){
+  if(-dirSelectX > abs(dirSelectY)){
 	agent.dirX = -1;
 	agent.dirY = 0;
   }
-  if(dirSelectY > dirSelectX && dirSelectX > 0){
+  if(dirSelectY > abs(dirSelectX)){
 	agent.dirX = 0;
 	agent.dirY = 1;
   }
-  if(dirSelectY > -dirSelectX && dirSelectX < 0){
+  if(-dirSelectY > abs(dirSelectX)){
 	agent.dirX = 0;
 	agent.dirY = -1;
   }
