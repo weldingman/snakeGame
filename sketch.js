@@ -19,22 +19,30 @@ function draw() {
 function mouseClicked() {
 	var dirSelectX = mouseX - agent.x;
 	var dirSelectY = mouseY - agent.y;
-  if(dirSelectX > abs(dirSelectY)){
-	agent.dirX = 1;
-	agent.dirY = 0;
+  if(abs(dirSelectX) > abs(dirSelectY)){
+	  if(dirSelectX > 0){
+	  	agent.dirX = 1;
+		agent.dirY = 0;
+	  }
+	  else{
+	  	agent.dirX = -1;
+		agent.dirY = 0;
+	  }
+	
   }
-  if(-dirSelectX > abs(dirSelectY)){
-	agent.dirX = -1;
-	agent.dirY = 0;
+  else{
+  	if(abs(dirSelectY) > abs(dirSelectX)){
+		if(dirSelectY > 0){
+			agent.dirX = 0;
+			agent.dirY = 1;
+		}
+		else{
+			agent.dirX = 0;
+			agent.dirY = -1;
+		}
+	}
   }
-  if(dirSelectY > abs(dirSelectX)){
-	agent.dirX = 0;
-	agent.dirY = 1;
-  }
-  if(-dirSelectY > abs(dirSelectX)){
-	agent.dirX = 0;
-	agent.dirY = -1;
-  }
+	
   return false;
 }
 
