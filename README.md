@@ -12,6 +12,7 @@ createCanvas(w, h); //loo ekraan
 background(col); // tausta värv
 if(arg); // kui tingimus näiteks: if(x > y){fill(0);}
 
+
 operaatorid:
 or ||
 and &&
